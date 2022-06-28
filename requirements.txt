@@ -1,0 +1,7 @@
+properscoring
+pyyaml
+scikit-image
+torch-scatter
+easydict
+torchsummary
+nuscenes-devkit

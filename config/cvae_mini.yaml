@@ -1,0 +1,25 @@
+
+batch_size: 32
+nb_epochs: 40
+eval_every: 2
+
+nsamples: 10
+gamma: 0.001
+
+training:
+    # Gradient norm clipping
+    lr: 0.001
+
+model:
+    input_size: 2
+    rnn_units: 128
+    nlayers: 1
+    bidirectional: False
+    latent_dim: 16
+    fc_units: 10
+    n_output: 6
+    local_dim: 128
+
+
+dataset:
+    path: '/local/DEEPLEARNING/nuscenes/preprocessed/v1.0-mini_6_3_local'

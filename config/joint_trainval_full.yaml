@@ -1,0 +1,31 @@
+
+batch_size: 32
+nb_epochs: 20
+eval_every: 2
+
+nsamples: 12
+
+training:
+    # Gradient norm clipping
+    joint:
+        lr: 0.001
+        lambda_loc: 1.0
+        lambda_rec: 1.0
+        lambda_dpp: 1.0
+
+model:
+    input_size: 2
+    rnn_units: 128
+    nlayers: 1
+    bidirectional: False
+    latent_dim: 16
+    fc_units: 10
+    n_output: 6
+    local_dim: 128
+
+    encoder:
+        pretrained: true
+        freeze: true
+
+dataset:
+    path: '/share/homes/lcalem/nuscenes/preprocessed/v1.0-trainval_6_3_full_reverse'

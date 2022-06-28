@@ -1,0 +1,34 @@
+
+batch_size: 32
+nb_epochs: 20
+eval_every: 2
+
+nsamples: 12     # Like park & al ECCV2020
+gamma: 0.001
+
+training:
+    # Gradient norm clipping
+    lr: 0.001
+    beta: 1.0     # beta-VAE style KL divergence weighting
+
+model:
+    input_size: 2
+    rnn_units: 128
+    nlayers: 1
+    bidirectional: False
+    latent_dim: 16
+    fc_units: 10
+    n_output: 6
+    local_dim: 128
+
+    encoder:
+        pretrained: true
+        freeze: true
+
+dsf:
+    training_lr: 0.001
+    nb_epochs: 16
+
+
+dataset:
+    path: '/share/homes/lcalem/nuscenes/preprocessed/v1.0-trainval_6_3_fill_reverse'
